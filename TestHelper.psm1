@@ -12,8 +12,10 @@ function New-Nuspec
         [string] $packageName,
         [Parameter(Mandatory=$true)]
         [string] $version,
-        [string] $author = "Microsoft",
-        [string] $owners = "Microsoft",
+        [Parameter(Mandatory=$true)]
+        [string] $author,
+        [Parameter(Mandatory=$true)]
+        [string] $owners,
         [string] $licenseUrl,
         [string] $projectUrl,
         [string] $iconUrl,
