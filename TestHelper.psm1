@@ -66,10 +66,10 @@ function New-Nuspec
 
     if (-not (Test-Path -Path $destinationPath))
     {
-        New-Item -Path $destinationPath -ItemType Directory
+        New-Item -Path $destinationPath -ItemType Directory > $null
     }
 
     $nuspecPath = Join-Path $destinationPath "$packageName.nuspec"
-    New-Item -Path $nuspecPath -ItemType File -Force
+    New-Item -Path $nuspecPath -ItemType File -Force > $null
     Set-Content -Path $nuspecPath -Value $content
 }
